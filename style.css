@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Variables */
+:root {
+    --color-bg: #142732;
+    --color-highlight: #9EBDAC;
+    --color-text: #F7EFE3;
+    --color-button: #D55E52;
+}
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    outline: 0;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.nav {
+    grid-area: nav;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    display: none;
+}
+
+.social {
+    grid-area: social;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 100%;
+    padding-right: 30px; 
+    display: none;
+}
+
+.nav a:hover, .social a:hover {
+    border-bottom: 2px solid var(--color-highlight);
+}
+
+
+.hero__text {
+    grid-area: leading;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__text a {
+    align-self: flex-start;
+    margin-top: 3rem;
+    border: 1px solid var(--color-button);
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all .2s;
+}
+
+.hero__text a:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.hero__text a:active {
+    transform: translateY(-1px) scale(.98);
+}
+
+/* About Me */
+.about-me {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-me h1 {
+    margin-bottom: 2rem;
+}
+
+.portfolio {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 400px;
+    width: 350px;
+    border: 2px solid var(--color-button);
+    border-radius: 5px;
+}
+
+.card img {
+    width: 100%;
+}
