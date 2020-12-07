@@ -101,19 +101,38 @@ a {
 }
 
 .portfolio {
-    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .card {
-    height: 400px;
+    height: auto;
     width: 350px;
-    border: 2px solid var(--color-button);
+    border: 2px solid var(--color-highlight);
     border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.card-info {
+    padding: 10px;
 }
 
 .card img {
     width: 100%;
+}
+
+.card p {
+    border-bottom: 1px solid var(--color-highlight);
+    margin-bottom: 2px;
+}
+
+.card ul {
+    list-style-type: none;
+}
+
+.card li {
+    margin-bottom: 5px;
 }
