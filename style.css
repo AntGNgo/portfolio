@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-/* Variables */
-:root {
-    --color-bg: #142732;
-    --color-highlight: #9EBDAC;
-    --color-text: #F7EFE3;
-    --color-button: #D55E52;
-}
-
-/* Resets */
 * {
     margin: 0;
     padding: 0;
@@ -27,112 +18,40 @@ a {
     outline: 0;
 }
 
-/* Hero */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
+h3 {
+    margin: 2rem 0;
+    display: inline-block;
+    font-size: 2rem;
     padding-left: 1rem;
-}
-
-.nav {
-    grid-area: nav;
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    list-style-type: none;
-    display: none;
-}
-
-.social {
-    grid-area: social;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    list-style-type: none;
-    width: 100%;
-    padding-right: 30px; 
-    display: none;
-}
-
-.nav a:hover, .social a:hover {
     border-bottom: 2px solid var(--color-highlight);
 }
 
-
-.hero__text {
-    grid-area: leading;
-    font-size: 2rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.hero__text a {
-    align-self: flex-start;
-    margin-top: 3rem;
-    border: 1px solid var(--color-button);
-    border-radius: 5px;
-    padding: 10px 20px;
-    transition: all .2s;
-}
-
-.hero__text a:hover {
-    transform: translateY(-5px) scale(1.02);
-}
-
-.hero__text a:active {
-    transform: translateY(-1px) scale(.98);
-}
-
-/* About Me */
-.about-me {
-    width: 85%;
+.container {
+    max-width: 1920px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "leading portfolio"
+    "skills  contact";
 }
 
-.about-me h1 {
-    margin-bottom: 2rem;
+.hero {
+    grid-area: leading;
+    align-self: center;
 }
 
 .portfolio {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    grid-area: portfolio;
 }
 
-.card {
-    height: auto;
-    width: 350px;
-    border: 2px solid var(--color-highlight);
-    border-radius: 5px;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+.my-skills {
+    grid-area: skills;
 }
 
-.card-info {
-    padding: 10px;
+.contact {
+    grid-area: contact;
 }
 
-.card img {
-    width: 100%;
-}
-
-.card p {
-    border-bottom: 1px solid var(--color-highlight);
-    margin-bottom: 2px;
-}
-
-.card ul {
-    list-style-type: none;
-}
-
-.card li {
-    margin-bottom: 5px;
-}
