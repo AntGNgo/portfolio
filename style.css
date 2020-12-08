@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+:root {
+    --color-bg: #11151C;
+    --color-text: #f1faee;
+    --color-highlight: #364156;
+
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +24,10 @@ a {
     color: var(--color-text);
     text-decoration: none;
     outline: 0;
+}
+
+i {
+    font-size: 70px;
 }
 
 h3 {
@@ -40,11 +52,19 @@ h3 {
 
 .hero {
     grid-area: leading;
+    font-size: 2rem;
     align-self: center;
 }
 
 .portfolio {
     grid-area: portfolio;
+}
+
+.card {
+    height: 100px;
+    width: 500px;
+    background-color: whitesmoke;
+    border-radius: 10px;
 }
 
 .my-skills {
@@ -54,4 +74,15 @@ h3 {
 .contact {
     grid-area: contact;
 }
+
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p {
+    margin-right: 2rem;
+}
+
 
