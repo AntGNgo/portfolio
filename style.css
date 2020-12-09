@@ -162,6 +162,7 @@ nav {
 }
 
 .skills {
+    justify-items: center;
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -174,5 +175,22 @@ nav {
 }
 
 .my-portfolio {
+    margin-top: 20px;
     animation: fadeInLeft 1.5s;
 }
+
+.card {
+    border: 1px solid var(--color-accent);
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px 5px;
+}
+
+.card a {
+    display: inline-block;
+    border: 1px solid var(--color-text);
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+/* Contact */
