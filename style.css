@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/* Variables */
+
 :root {
     --color-bg: #121116;
     --color-text: #F3EDF1;
@@ -8,6 +10,7 @@
 
 }
 
+/* Resets and Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -26,6 +29,11 @@ a {
     text-decoration: none;
     outline: 0;
 }
+
+
+/* Navigation */
+
+
 
 nav {
     height: 10vh;
@@ -61,6 +69,34 @@ nav {
     margin-bottom: 2rem;
 }
 
+.line-1, .line-2, .line-3 {
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: var(--color-accent);
+    transition: all .2s;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.active .line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.active .line-2 {
+    opacity: 0;
+}
+.active .line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+/* Home */
+
 .hero {
     height: 90vh;
     margin-left: 1rem;
@@ -88,30 +124,8 @@ nav {
     transform: scale(.98) translateY(-3px);
 }
 
+/* Animations */
 
-.line-1, .line-2, .line-3 {
-    width: 25px;
-    height: 3px;
-    margin-bottom: 5px;
-    background-color: var(--color-accent);
-    transition: all .2s;
-}
-
-.burger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.active .line-1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-.active .line-2 {
-    opacity: 0;
-}
-.active .line-3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
 
 @keyframes fadeInLeft {
     0% {
