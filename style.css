@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root {
-    --color-bg: #11151C;
-    --color-text: #f1faee;
-    --color-highlight: #364156;
+    --color-bg: #121116;
+    --color-text: #F3EDF1;
+    --color-accent: #8B49B1;
+    --color-menus: #0f0f13;
 
 }
-
 
 * {
     box-sizing: border-box;
@@ -17,144 +17,120 @@
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", 'sans-serif';
+    overflow-x: hidden;
 }
 
 a {
     color: var(--color-text);
-    outline: 0;
     text-decoration: none;
+    outline: 0;
 }
 
-i {
-    font-size: 70px;
+nav {
+    height: 10vh;
+    margin: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInTop .7s;
 }
 
-h3 {
-    border-bottom: 2px solid var(--color-highlight);
-    display: inline-block;
-    font-size: 2rem;
-    margin: 2rem 0;
-    padding-left: 1rem;
+.nav-links {
+    position: absolute;
+    right: -100px;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-menus);
+    border-radius: 10px;
+    padding-right: 10px;
+    align-items: center;
+    /* height: 50vh; */
+    list-style-type: none;
+    transition: all .5s;
+
+
 }
 
-.arrow {
-    display: none;
+.active .nav-links {
+    right: 0px;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-    grid-template-rows: 2fr 1fr;
-    grid-template-areas: 
-    "leading portfolio"
-    "skills  contact";
-    height: 100vh;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding-left: 1as0px;
-}
-
-.hero {
-    align-self: center;
-    font-size: 2rem;
-    grid-area: leading;
-}
-
-.hero__text p {
+.nav-links li {
     margin-bottom: 2rem;
 }
 
-.resume {
-    border: 2px solid var(--color-text);
-    border-radius: 10px;
-    padding: 10px 20px;
-}
-
-.portfolio {
-    grid-area: portfolio;
-}
-
-.card {
-    align-items: center;
-    background-color: var(--color-highlight);
-    border-radius: 10px;
+.hero {
+    height: 90vh;
+    margin-left: 1rem;
     display: flex;
-    height: 100px;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 1rem;
-    width: 500px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    animation: fadeInLeft .7s;
+    backface-visibility: hidden;
 }
 
-.card a {
-    border: 1px solid var(--color-text);
-    margin-right: 15px;
+.my-work {
+    display: inline-block;
+    border: 2px solid var(--color-accent);
     padding: 10px 20px;
+    margin-top: 20px;
+    transition: all .3s;
+}
+
+.my-work:hover {
+    transform: scale(1.03) translateY(-5px);
+}
+
+.my-work:active {
+    transform: scale(.98) translateY(-3px);
 }
 
 
-.my-skills {
-    grid-area: skills;
+.line-1, .line-2, .line-3 {
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: var(--color-accent);
+    transition: all .2s;
 }
 
-.contact {
-    grid-area: contact;
-}
-
-
-.contact-info {
-    align-items: center;
+.burger {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-.contact-info p {
-    margin-right: 2rem;
+.active .line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.active .line-2 {
+    opacity: 0;
+}
+.active .line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.contact-links a:first-child {
-    margin-right: 2rem;
-}
-
-
-@media screen and (max-width: 768px) {
-    /* .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 100% 1fr 1fr;
-        grid-template-areas: 
-        "leading"
-        "skills"
-        "portfolio"
-        "contact";
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
     }
-     */
-    .hero {
-        align-self: center;
-        justify-self: center;
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
     }
+}
 
-    .arrow {
-        align-self: end;
-        display: flex;
-        grid-area: leading;
-        justify-content: center;
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
         transform: translateY(-100px);
-        width: 100vw;
     }
-
-    .line1, .line2 {
-        width: 50px;
-        height: 10px;
-        border-radius: 10px;
-        background-color: var(--color-text);
-    }
-
-    .line1 {
-        transform: rotate(30deg) translateX(8px);
-    }
-
-    .line2 {
-        transform: rotate(-30deg) translateX(-8px);
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
-
