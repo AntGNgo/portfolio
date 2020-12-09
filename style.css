@@ -30,6 +30,15 @@ a {
     outline: 0;
 }
 
+i {
+    font-size: 3rem;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
 
 /* Navigation */
 
@@ -46,11 +55,11 @@ nav {
 
 .nav-links {
     position: absolute;
-    right: -100px;
+    right: -200px;
     top: 10vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--color-menus);
+    background-color: #0f0f138a;
     border-radius: 10px;
     padding-right: 10px;
     align-items: center;
@@ -93,7 +102,29 @@ nav {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/* Animations */
 
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 
 /* Home */
 
@@ -124,27 +155,24 @@ nav {
     transform: scale(.98) translateY(-3px);
 }
 
-/* Animations */
+/* Portfolio */
 
-
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
+.my-skills {
+    animation: fadeInLeft .5s;
 }
 
-@keyframes fadeInTop {
-    0% {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+.skills {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    animation: fadeInLeft 1s;
+}
+
+.devicon-mongodb-plain-wordmark {
+    grid-column: 2;
+}
+
+.my-portfolio {
+    animation: fadeInLeft 1.5s;
 }
