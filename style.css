@@ -55,6 +55,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     animation: fadeInTop .7s;
+    position: relative;
 }
 
 .nav-links {
