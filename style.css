@@ -60,7 +60,7 @@ nav {
 }
 
 .nav-links {
-    position: absolute;
+    position: fixed;
     right: -200px;
     top: 10vh;
     display: flex;
