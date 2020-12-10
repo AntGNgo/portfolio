@@ -18,7 +18,8 @@
 }
 
 html, body {
-    overflow: hidden;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -67,7 +68,7 @@ nav {
     padding-right: 10px;
     align-items: center;
     list-style-type: none;
-    animation: all .5s;
+    transition: all .5s;
 }
 
 .active .nav-links {
