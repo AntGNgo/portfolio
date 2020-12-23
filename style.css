@@ -198,6 +198,10 @@ nav {
   padding: 5px 10px;
 }
 
+.card a:hover {
+  border: 1px solid var(--color-accent);
+}
+
 /* Contact */
 
 .contact h1,
