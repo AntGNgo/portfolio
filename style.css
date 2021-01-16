@@ -215,8 +215,11 @@ nav {
   overflow: hidden;
 }
 
-.card h3,
-p {
+.card h3 {
+  padding: 10px;
+}
+
+.card p {
   padding: 10px;
 }
 
